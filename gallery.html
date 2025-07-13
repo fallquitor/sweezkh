@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sweezkh Gallery</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Tabs Navigation */
+    nav {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 2px solid white;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      margin: 10px 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+      box-sizing: border-box;
+      flex-grow: 1;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #444;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Tabs -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html" style="background-color: rgba(255, 255, 255, 0.3); border-color: white;">Gallery</a>
+    <a href="roster.html">Roster</a>
+    <a href="highlights.html">Highlights</a>
+  </nav>
+
+  <h1>Sweezkh Gallery</h1>
+
+  <div class="gallery">
+    <img src="images/bolen.webp" alt="Sweezkh 1" />
+    <img src="images/bolen2.webp" alt="Sweezkh 2" />
+    <img src="images/bolen3.webp" alt="Sweezkh 3" />
+    <img src="images/bolen4.jpg" alt="Sweezkh 4" />
+    <img src="images/sweezkh3.webp" alt="Sweezkh 5" />
+    
+    <img src="images/legs.png" alt="Sweezkh 5" />
+    <img src="images/mog.webp" alt="Sweezkh 5" />
+    <img src="images/dexter.png" alt="Sweezkh 5" />
+    <img src="images/prime.png" alt="Sweezkh 5" />
+    <img src="images/main character.jpg" alt="Sweezkh 5" />
+
+    
+    <!-- Add or remove images -->
+  </div>
+
+</body>
+</html>

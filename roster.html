@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sweezkh Roster</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <style>
+    body {
+      margin: 0; padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    nav a {
+      text-decoration: none;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 2px solid white;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+    nav a.active {
+      background-color: rgba(255,255,255,0.3);
+      border-color: white;
+    }
+    h1 {
+      margin: 10px 0 20px;
+    }
+
+    /* Container holding buttons and roster */
+    .roster-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 900px;
+      user-select: none;
+    }
+
+    /* Updated width to show exactly 1 small + center + 1 small */
+    .roster-wrapper {
+      width: 740px; /* 200 + 30 + 280 + 30 + 200 */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .roster-container {
+      display: flex;
+      gap: 30px;
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+
+    .roster-image {
+      flex: 0 0 200px;
+      max-height: 250px;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 3px solid white;
+      filter: brightness(0.7);
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+
+    .roster-image.center {
+      flex: 0 0 280px;
+      max-height: 350px;
+      filter: brightness(1);
+      border-color: #FFD700;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #FFD700;
+      opacity: 1;
+      cursor: default;
+    }
+
+    button {
+      background-color: rgba(255,255,255,0.1);
+      border: 2px solid white;
+      color: white;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      user-select: none;
+      margin: 0;
+      width: 80px;
+      flex-shrink: 0;
+    }
+    button:hover {
+      background-color: rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="roster.html" class="active">Roster</a>
+    <a href="highlights.html">Highlights</a>
+  </nav>
+
+  <h1>Sweezkh Roster</h1>
+
+  <div class="roster-controls">
+    <button id="prevBtn" aria-label="Previous player">‹ Prev</button>
+    <div class="roster-wrapper">
+      <div class="roster-container" id="rosterContainer" tabindex="0">
+        <!-- Images will be injected here -->
+      </div>
+    </div>
+    <button id="nextBtn" aria-label="Next player">Next ›</button>
+  </div>
+
+  <script>
+    const roster = [
+      { src: 'images/katya.jpg', alt: 'Player Katya' },
+      { src: 'images/wiwers.jpg', alt: 'Player Wiwers' },
+      { src: 'images/masha.jpg', alt: 'Player Masha' },
+      { src: 'images/dismoral.jpg', alt: 'Player Dismoral' },
+      { src: 'images/donk.png', alt: 'Player Bolen' }
+    ];
+
+    const rosterContainer = document.getElementById('rosterContainer');
+    let centerIndex = 0;
+
+    function renderImages() {
+      rosterContainer.innerHTML = '';
+      roster.forEach((player, index) => {
+        const img = document.createElement('img');
+        img.src = player.src;
+        img.alt = player.alt;
+        img.classList.add('roster-image');
+        if (index === centerIndex) img.classList.add('center');
+        rosterContainer.appendChild(img);
+      });
+    }
+
+    function updateCenterImage() {
+      const images = rosterContainer.querySelectorAll('img');
+      images.forEach((img, idx) => {
+        img.classList.toggle('center', idx === centerIndex);
+        img.style.opacity = idx === centerIndex ? '1' : '0.6';
+        img.style.filter = idx === centerIndex ? 'brightness(1)' : 'brightness(0.7)';
+        img.style.transform = idx === centerIndex ? 'scale(1.05)' : 'scale(1)';
+        img.style.borderColor = idx === centerIndex ? '#FFD700' : 'white';
+        img.style.boxShadow = idx === centerIndex ? '0 0 20px #FFD700' : 'none';
+        img.style.cursor = idx === centerIndex ? 'default' : 'pointer';
+      });
+    }
+
+    function updateScroll() {
+      const gap = 30;
+      const smallWidth = 200;
+      const centerWidth = 280;
+      const wrapperWidth = 740; // updated for exactly 1 left + center + 1 right
+
+      const offset = centerIndex * (smallWidth + gap);
+      const translateX = ((wrapperWidth - centerWidth) / 2) - offset;
+
+      rosterContainer.style.transform = `translateX(${translateX}px)`;
+    }
+
+    function updateRoster() {
+      renderImages();
+      updateCenterImage();
+      updateScroll();
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      centerIndex = (centerIndex - 1 + roster.length) % roster.length;
+      updateRoster();
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      centerIndex = (centerIndex + 1) % roster.length;
+      updateRoster();
+    });
+
+    rosterContainer.addEventListener('click', (e) => {
+      if (e.target.tagName === 'IMG') {
+        const imgs = Array.from(rosterContainer.querySelectorAll('img'));
+        const clickedIndex = imgs.indexOf(e.target);
+        if (clickedIndex !== centerIndex) {
+          centerIndex = clickedIndex;
+          updateRoster();
+        }
+      }
+    });
+
+    updateRoster();
+  </script>
+
+</body>
+</html>

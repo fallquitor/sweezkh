@@ -1,10 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sweezkh cs2 legend.</title>
+  <meta charset="UTF-8">
+  <title>Sweezkh CS2 Legend</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('images/neon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+    /* Tabs Navigation */
+    nav {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 2px solid white;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      margin: 10px 0;
+    }
+
+    h4 {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    /* New container for map + side images */
+    .map-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: nowrap;
+    }
+
+    .side-image {
+      width: 500px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    iframe {
+      border: 4px solid white;
+      border-radius: 10px;
+      width: 600px;
+      height: 450px;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Navigation Tabs -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="roster.html">Roster</a>
+    <a href="highlights.html">Highlights</a>
+  </nav>
+
   <h1>Sweezkh future tier 1.</h1>
+
+  <h4>
+    В мире киберспорта, где большинство игроков полагаются на мощные ПК и мониторы с высоким герцем, появился он — Sweezkh. <br>
+    Игрок будущего, будущая Tier 1 легенда, начавший свой путь на 60Hz мониторе, с пингом выше среднего и мышкой, пережившей три падения. <br>
+    Несмотря на всё это, он стал известен как Pistol King — человек, который выигрывал раунды с одним лишь Five-Seven против фуллбай команды. <br>
+    Его чувство тайминга было почти сверхъестественным, движения — резкими и точными, а понимание игры — будто он видел матч за секунду до того, как всё происходило. <br>
+    SMG в его руках превращалось в оружие массового уничтожения: MAC-10, MP9, UMP — всё становилось смертельно опасным. Sweezkh играл не на девайсах, а на инстинктах. <br>
+    Играя на низких FPS, он давал хайлайты, которые попали в клипы будущего. Его путь ещё не закончен, но одно уже ясно: <br>
+    Sweezkh — это имя, которое войдёт в историю CS не как очередной игрок, а как легенда, родившаяся вопреки всему.<br>
+  </h4>
+
   <img src="images/sweezkh.jpg" alt="Sweezkh" width="400">
+
+  <div class="map-wrapper">
+    <img class="side-image" src="images/skinny ts2.png" alt="Left side image">
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2454.5424861293304!2d8.549453476924533!3d52.03343197213924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba3d75a4df78ed%3A0xf2d53c46357c3b0c!2sEros%20Center%20Bielefeld!5e0!3m2!1sen!2suk!4v1752364960248!5m2!1sen!2suk"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+    <img class="side-image" src="images/skinny ts.png" alt="Right side image">
+  </div>
+
 </body>
 </html>
