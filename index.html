@@ -6,25 +6,25 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url('images/neon.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url('images/neon.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
 
     /* Tabs Navigation */
     nav {
@@ -92,13 +92,39 @@
       height: 450px;
       flex-shrink: 0;
     }
+
+    /* Socials bar */
+    .socials-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      margin: 50px 0 30px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px 25px;
+      border-radius: 12px;
+      flex-wrap: wrap;
+    }
+
+    .socials-bar a img {
+      max-width: 40px;
+      height: auto;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      filter: drop-shadow(0 0 4px rgba(255,255,255,0.3));
+    }
+
+    .socials-bar a:hover img {
+      transform: scale(1.2);
+      opacity: 0.85;
+    }
+
   </style>
 </head>
 <body>
 
   <!-- Navigation Tabs -->
   <nav>
-    <a href="index.html"class="active">Home</a>
+    <a href="index.html" class="active">Home</a>
     <a href="gallery.html">Gallery</a>
     <a href="roster.html">Roster</a>
     <a href="highlights.html">Highlights</a>
@@ -126,6 +152,25 @@
       allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       
     <img class="side-image" src="images/skinny ts.png" alt="Right side image">
+  </div>
+
+  <!-- Social Icons Bar -->
+  <div class="socials-bar">
+    <a href="https://soundcloud.com/user-332931722" target="_blank" title="SoundCloud">
+      <img src="images/icons/soundcloud.png" alt="SoundCloud">
+    </a>
+    <a href="https://www.instagram.com/shurik_kh/" target="_blank" title="Instagram">
+      <img src="images/icons/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.twitch.tv/sweezkh" target="_blank" title="Twitch">
+      <img src="images/icons/twitch.png" alt="Twitch">
+    </a>
+    <a href="https://www.faceit.com/en/players/Sweezkh" target="_blank" title="FACEIT">
+      <img src="images/icons/faceit.png" alt="FACEIT">
+    </a>
+    <a href="https://steamcommunity.com/profiles/76561199049622200" target="_blank" title="Steam">
+      <img src="images/icons/steam.png" alt="Steam">
+    </a>
   </div>
 
 </body>
