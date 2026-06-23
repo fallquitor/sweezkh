@@ -1,219 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sweezkh Roster</title>
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <style>
-    body {
-      background-image: url('images/mirage.webp');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      margin: 0; padding: 0;; 
-      font-family: Arial, sans-serif;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      overflow-x: hidden;
-    }
-    nav {
-      display: flex;
-      gap: 10px;
-      margin: 20px 0;
-    }
-    nav a {
-      text-decoration: none;
-      background-color: rgba(0,0,0,0.5);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      border: 2px solid white;
-      transition: background-color 0.3s;
-    }
-    nav a:hover {
-      background-color: rgba(255,255,255,0.2);
-    }
-    nav a.active {
-      background-color: rgba(255,255,255,0.3);
-      border-color: white;
-    }
-    h1 {
-      margin: 10px 0 20px;
-    }
-
-    /* Container holding buttons and roster */
-    .roster-controls {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      width: 900px;
-      user-select: none;
-    }
-
-    /* Updated width to show exactly 1 small + center + 1 small */
-    .roster-wrapper {
-      width: 740px; /* 200 + 30 + 280 + 30 + 200 */
-      overflow: hidden;
-      position: relative;
-    }
-
-    .roster-container {
-      display: flex;
-      gap: 30px;
-      transition: transform 0.5s ease;
-      will-change: transform;
-    }
-
-    .roster-image {
-      flex: 0 0 200px;
-      max-height: 250px;
-      object-fit: contain;
-      border-radius: 10px;
-      border: 3px solid white;
-      filter: brightness(0.7);
-      cursor: pointer;
-      opacity: 0.6;
-      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-      user-select: none;
-    }
-
-    .roster-image.center {
-      flex: 0 0 280px;
-      max-height: 350px;
-      filter: brightness(1);
-      border-color: #FFD700;
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #FFD700;
-      opacity: 1;
-      cursor: default;
-    }
-
-    button {
-      background-color: rgba(255,255,255,0.1);
-      border: 2px solid white;
-      color: white;
-      font-size: 18px;
-      padding: 10px 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      user-select: none;
-      margin: 0;
-      width: 80px;
-      flex-shrink: 0;
-    }
-    button:hover {
-      background-color: rgba(255,255,255,0.3);
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roster — Sweezkh</title>
+  <meta name="description" content="Meet the personalities in the Sweezkh CS2 roster archive.">
+  <meta name="theme-color" content="#080a0c">
+  <meta property="og:type" content="website"><meta property="og:title" content="Roster — Sweezkh"><meta property="og:description" content="Meet the Sweezkh roster."><meta property="og:url" content="https://sweezkh.pp.ua/roster.html"><meta property="og:image" content="https://sweezkh.pp.ua/images/mirage.webp">
+  <link rel="canonical" href="https://sweezkh.pp.ua/roster.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body data-page="roster">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="index.html" aria-label="Sweezkh home"><span class="brand-mark" aria-hidden="true">S</span><span>Sweezkh</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-links" id="primary-menu"><li><a href="index.html">Home</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="roster.html" aria-current="page">Roster</a></li><li><a href="highlights.html">Highlights</a></li><li><a href="music.html">Music</a></li><li><a href="edits.html">Edits</a></li></ul></nav></header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="roster.html" class="active">Roster</a>
-    <a href="highlights.html">Highlights</a>
-    <a href="music.html">Music</a>
-    <a href="edits.html">Edits</a>
-  </nav>
-
-  <h1>Sweezkh Roster</h1>
-
-  <div class="roster-controls">
-    <button id="prevBtn" aria-label="Previous player">‹ Prev</button>
-    <div class="roster-wrapper">
-      <div class="roster-container" id="rosterContainer" tabindex="0">
-        <!-- Images will be injected here -->
+  <main id="main-content">
+    <header class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow">The lineup</p><h1 class="page-title">Roster.</h1><p class="page-summary">The cast around the server. No invented roles, no inflated stats—just the original roster, finally given a proper stage.</p></div></header>
+    <section class="section">
+      <div class="container" data-roster>
+        <div class="section-topline reveal"><div><p class="eyebrow">Player select</p><h2>Choose your player.</h2></div><span class="count-label">Six in the archive</span></div>
+        <div class="roster-stage reveal" aria-live="polite">
+          <div class="roster-info"><p class="number" data-roster-number>Player 01 / 06</p><h2 data-roster-name>Katya</h2><p>Roster archive member</p></div>
+          <div class="roster-focus"><img src="images/katya.jpg" alt="Katya, Sweezkh roster member" width="640" height="640" data-roster-image></div>
+          <div class="roster-actions"><button class="icon-button" type="button" aria-label="Previous player" data-roster-prev>←</button><button class="icon-button" type="button" aria-label="Next player" data-roster-next>→</button></div>
+        </div>
+        <div class="roster-tabs reveal" role="tablist" aria-label="Roster members">
+          <button class="roster-tab" type="button" role="tab" aria-selected="true"><img src="images/katya.jpg" alt="" width="640" height="640" loading="lazy"><span>Katya</span></button>
+          <button class="roster-tab" type="button" role="tab" aria-selected="false"><img src="images/wiwers.jpg" alt="" width="1080" height="1079" loading="lazy"><span>Wiwers</span></button>
+          <button class="roster-tab" type="button" role="tab" aria-selected="false"><img src="images/masha.jpg" alt="" width="480" height="600" loading="lazy"><span>Masha</span></button>
+          <button class="roster-tab" type="button" role="tab" aria-selected="false"><img src="images/dismoral.jpg" alt="" width="960" height="1280" loading="lazy"><span>Dismoral</span></button>
+          <button class="roster-tab" type="button" role="tab" aria-selected="false"><img src="images/donk.png" alt="" width="273" height="415" loading="lazy"><span>Bolen</span></button>
+          <button class="roster-tab" type="button" role="tab" aria-selected="false"><img src="images/lizka.jpg" alt="" width="959" height="1280" loading="lazy"><span>Lizka</span></button>
+        </div>
       </div>
-    </div>
-    <button id="nextBtn" aria-label="Next player">Next ›</button>
-  </div>
-
-  <script>
-    const roster = [
-      { src: 'images/katya.jpg', alt: 'Player Katya' },
-      { src: 'images/wiwers.jpg', alt: 'Player Wiwers' },
-      { src: 'images/masha.jpg', alt: 'Player Masha' },
-      { src: 'images/dismoral.jpg', alt: 'Player Dismoral' },
-      { src: 'images/donk.png', alt: 'Player Bolen' },
-      { src: 'images/lizka.jpg', alt: 'Player Lizka' }
-    ];
-
-    const rosterContainer = document.getElementById('rosterContainer');
-    let centerIndex = 0;
-
-    function renderImages() {
-      rosterContainer.innerHTML = '';
-      roster.forEach((player, index) => {
-        const img = document.createElement('img');
-        img.src = player.src;
-        img.alt = player.alt;
-        img.classList.add('roster-image');
-        if (index === centerIndex) img.classList.add('center');
-        rosterContainer.appendChild(img);
-      });
-    }
-
-    function updateCenterImage() {
-      const images = rosterContainer.querySelectorAll('img');
-      images.forEach((img, idx) => {
-        img.classList.toggle('center', idx === centerIndex);
-        img.style.opacity = idx === centerIndex ? '1' : '0.6';
-        img.style.filter = idx === centerIndex ? 'brightness(1)' : 'brightness(0.7)';
-        img.style.transform = idx === centerIndex ? 'scale(1.05)' : 'scale(1)';
-        img.style.borderColor = idx === centerIndex ? '#FFD700' : 'white';
-        img.style.boxShadow = idx === centerIndex ? '0 0 20px #FFD700' : 'none';
-        img.style.cursor = idx === centerIndex ? 'default' : 'pointer';
-      });
-    }
-
-    function updateScroll() {
-      const gap = 30;
-      const smallWidth = 200;
-      const centerWidth = 280;
-      const wrapperWidth = 740; // updated for exactly 1 left + center + 1 right
-
-      const offset = centerIndex * (smallWidth + gap);
-      const translateX = ((wrapperWidth - centerWidth) / 2) - offset;
-
-      rosterContainer.style.transform = `translateX(${translateX}px)`;
-    }
-
-    function updateRoster() {
-      renderImages();
-      updateCenterImage();
-      updateScroll();
-    }
-
-    document.getElementById('prevBtn').addEventListener('click', () => {
-      centerIndex = (centerIndex - 1 + roster.length) % roster.length;
-      updateRoster();
-    });
-
-    document.getElementById('nextBtn').addEventListener('click', () => {
-      centerIndex = (centerIndex + 1) % roster.length;
-      updateRoster();
-    });
-
-    rosterContainer.addEventListener('click', (e) => {
-      if (e.target.tagName === 'IMG') {
-        const imgs = Array.from(rosterContainer.querySelectorAll('img'));
-        const clickedIndex = imgs.indexOf(e.target);
-        if (clickedIndex !== centerIndex) {
-          centerIndex = clickedIndex;
-          updateRoster();
-        }
-      }
-    });
-
-    updateRoster();
-  </script>
-
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><span class="footer-tag">Sweezkh // Future tier one</span><span>© <span data-year>2026</span> · Built for the next round.</span></div></footer>
 </body>
 </html>

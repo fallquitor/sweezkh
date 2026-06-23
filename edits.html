@@ -1,99 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sweezkh Edits</title>
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <style>
-    body {
-    font-family: Arial, sans-serif;
-    background: url('images/bg.jpg') no-repeat center center fixed;
-    background-size: contain;
-    background-color: black; /* Fills the rest of the space if image doesn't cover full area */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    }
-
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      padding: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      border: 2px solid white;
-      transition: background-color 0.3s;
-    }
-
-    nav a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    h1 {
-      margin: 20px;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .grid video {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      border: 2px solid white;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edits — Sweezkh</title>
+  <meta name="description" content="The Sweezkh montage archive: seventeen CS2 and lifestyle edits, loaded only when you press play.">
+  <meta name="theme-color" content="#080a0c">
+  <meta property="og:type" content="website"><meta property="og:title" content="Edits — Sweezkh"><meta property="og:description" content="The montage archive, cut with its own rhythm."><meta property="og:url" content="https://sweezkh.pp.ua/edits.html"><meta property="og:image" content="https://sweezkh.pp.ua/images/bg.jpg">
+  <link rel="canonical" href="https://sweezkh.pp.ua/edits.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body data-page="edits">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><nav class="nav-shell" aria-label="Primary navigation"><a class="brand" href="index.html" aria-label="Sweezkh home"><span class="brand-mark" aria-hidden="true">S</span><span>Sweezkh</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle navigation"><span></span><span></span><span></span></button><ul class="nav-links" id="primary-menu"><li><a href="index.html">Home</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="roster.html">Roster</a></li><li><a href="highlights.html">Highlights</a></li><li><a href="music.html">Music</a></li><li><a href="edits.html" aria-current="page">Edits</a></li></ul></nav></header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="roster.html">Roster</a>
-    <a href="highlights.html">Highlights</a>
-    <a href="music.html">Music</a>
-    <a href="edits.html" class="active">Edits</a>
-  </nav>
-
-  <h1>Sweezkh Edits</h1>
-
-  <div class="grid">
-    <video src="edits/sweezkhpeek.mp4" controls></video>
-    <video src="edits/tolpi.mp4" controls></video>
-    <video src="edits/train.mp4" controls></video>
-    <video src="edits/uff.mp4" controls></video>
-    <video src="edits/villain.mp4" controls></video>
-    <video src="edits/wow.mp4" controls></video>
-    <video src="edits/777.mp4" controls></video>
-    <video src="edits/allah.mp4" controls></video>
-    <video src="edits/aura.mp4" controls></video>
-    <video src="edits/family.mp4" controls></video>
-    <video src="edits/glowup.mp4" controls></video>
-    <video src="edits/magic.mp4" controls></video>
-    <video src="edits/memories.mp4" controls></video>
-    <video src="edits/museum.mp4" controls></video>
-    <video src="edits/narik.mp4" controls></video>
-    <video src="edits/neozhid.mp4" controls></video>
-    <video src="edits/sike.mp4" controls></video>
-  </div>
-
+  <main id="main-content">
+    <header class="page-hero"><div class="page-hero-inner reveal"><p class="eyebrow">Montage archive</p><h1 class="page-title">Edits.</h1><p class="page-summary">Seventeen cuts, one timeline, zero autoplay. Pick an edit and let it take over the card.</p></div></header>
+    <section class="section">
+      <div class="container">
+        <div class="section-topline reveal"><div><p class="eyebrow">After the round</p><h2>Cut to the beat.</h2></div><span class="count-label">17 edits · click to load</span></div>
+        <div class="media-grid reveal">
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/sweezkhpeek.mp4" aria-label="Play Sweezkh Peek"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 01</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Sweezkh Peek</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/tolpi.mp4" aria-label="Play Tolpi"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 02</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Tolpi</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/train.mp4" aria-label="Play Train"><img src="images/train.png" alt="Train map edit preview" width="1600" height="900" loading="lazy"><span class="video-label">Edit 03</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Map edit</span><h2>Train</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/uff.mp4" aria-label="Play Uff"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 04</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Uff</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/villain.mp4" aria-label="Play Villain"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 05</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Character edit</span><h2>Villain</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/wow.mp4" aria-label="Play Wow"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 06</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Wow</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/777.mp4" aria-label="Play 777"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 07</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>777</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/allah.mp4" aria-label="Play Allah"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 08</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Allah</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/aura.mp4" aria-label="Play Aura"><img src="images/neon.jpg" alt="Neon edit preview" width="2560" height="1440" loading="lazy"><span class="video-label">Edit 09</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Atmosphere</span><h2>Aura</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/family.mp4" aria-label="Play Family"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 10</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Archive edit</span><h2>Family</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/glowup.mp4" aria-label="Play Glowup"><img src="images/neon.jpg" alt="Neon edit preview" width="2560" height="1440" loading="lazy"><span class="video-label">Edit 11</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Progression</span><h2>Glowup</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/magic.mp4" aria-label="Play Magic"><img src="images/neon.jpg" alt="Neon edit preview" width="2560" height="1440" loading="lazy"><span class="video-label">Edit 12</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Magic</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/memories.mp4" aria-label="Play Memories"><img src="images/sweezkh.jpg" alt="Sweezkh memories edit preview" width="4608" height="2072" loading="lazy"><span class="video-label">Edit 13</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Archive edit</span><h2>Memories</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/museum.mp4" aria-label="Play Museum"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 14</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Museum</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/narik.mp4" aria-label="Play Narik"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 15</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Narik</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/neozhid.mp4" aria-label="Play Neozhid"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 16</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Montage</span><h2>Neozhid</h2></div></article>
+          <article class="media-card"><button class="video-launch" type="button" data-video="edits/sike.mp4" aria-label="Play Sike"><img src="images/bg.jpg" alt="Sweezkh edit preview" width="1200" height="630" loading="lazy"><span class="video-label">Edit 17</span><span class="play-icon" aria-hidden="true">▶</span></button><div class="media-meta"><span>Final cut</span><h2>Sike</h2></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><span class="footer-tag">Sweezkh // Future tier one</span><span>© <span data-year>2026</span> · Built for the next round.</span></div></footer>
 </body>
 </html>
